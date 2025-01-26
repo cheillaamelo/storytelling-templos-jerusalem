@@ -66,7 +66,7 @@ export default function StorytellingPage() {
         transition={{ duration: 0.5 }}
         className="bg-white p-6 rounded-2xl shadow-lg max-w-2xl text-center relative z-10"
       >
-        <h2 className="text-2xl font-bold mb-4">
+        <h2 className="text-2xl font-bold mb-4 text-black">
           {sections[currentSection].title}
         </h2>
         <p className="text-black">{sections[currentSection].content}</p>
