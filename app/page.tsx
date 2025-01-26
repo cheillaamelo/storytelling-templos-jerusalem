@@ -6,6 +6,12 @@ import Button from "@/components/ui/Button";
 
 const sections = [
   {
+    title:
+      "As duas destruições do Templo de Jerusalém foram eventos marcantes na história do povo judeu, ocorrendo em momentos diferentes e sob domínios distintos.",
+    content: "",
+    image: "/images/templos.webp",
+  },
+  {
     title: "Primeira Destruição (586 a.C.)",
     content:
       "Em 586 a.C., o Reino da Babilônia, liderado por Nabucodonosor II, cercou Jerusalém após o rei Zedequias, de Judá, tentar se rebelar e buscar apoio do Egito. Após um longo cerco, os babilônios conquistaram a cidade, saquearam e incendiaram o Primeiro Templo, construído por Salomão. Grande parte da população judaica foi exilada para a Babilônia, no chamado Cativeiro Babilônico.",
