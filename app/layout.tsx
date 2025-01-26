@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "As duas destruições do Templo de Jerusalém",
+  title: "Templos de Jerusalém",
   description: "",
 };
 
