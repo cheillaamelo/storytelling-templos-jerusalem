@@ -1,8 +1,9 @@
 "use client";
 
 import { useState } from "react";
-import { motion } from "framer-motion";
-import Button from "@/components/ui/Button";
+import SectionBackground from "@/components/SectionBackground";
+import SectionContent from "@/components/SectionContent";
+import SectionNavigator from "@/components/SectionNavigator";
 
 const sections = [
   {
@@ -52,36 +53,18 @@ export default function StorytellingPage() {
     }
   };
 
+  const { title, content, image } = sections[currentSection];
+
   return (
     <div className="flex flex-col items-center justify-center min-h-screen p-6 bg-gray-100 relative">
-      <div
-        className="absolute inset-0 bg-cover bg-center opacity-50"
-        style={{ backgroundImage: `url(${sections[currentSection].image})` }}
-      ></div>
-      <motion.div
-        key={currentSection}
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 0.5, y: 0 }}
-        exit={{ opacity: 0, y: -20 }}
-        transition={{ duration: 0.5 }}
-        className="bg-white p-6 rounded-2xl shadow-lg max-w-2xl text-center relative z-10"
-      >
-        <h2 className="text-2xl font-bold mb-4 text-black">
-          {sections[currentSection].title}
-        </h2>
-        <p className="text-black">{sections[currentSection].content}</p>
-      </motion.div>
-      <div className="mt-6 flex gap-4 relative z-10">
-        <Button onClick={prevSection} disabled={currentSection === 0}>
-          Voltar
-        </Button>
-        <Button
-          onClick={nextSection}
-          disabled={currentSection === sections.length - 1}
-        >
-          Próximo
-        </Button>
-      </div>
+      <SectionBackground image={image} />
+      <SectionContent title={title} content={content} />
+      <SectionNavigator
+        onPrev={prevSection}
+        onNext={nextSection}
+        currentIndex={currentSection}
+        totalSections={sections.length}
+      />
     </div>
   );
 }
